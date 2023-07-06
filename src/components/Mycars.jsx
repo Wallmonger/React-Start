@@ -5,10 +5,10 @@ class Mycars extends Component {
     render() {
         return (
             <div>
-                <h1>Hello React</h1>
+                <h1>Catalogue voiture</h1>
                 <Car color="red">Ford</Car>
-                <Car color="black">Mercedes</Car>
-                <Car color="green">Peugeot</Car>               
+                <Car>Mercedes</Car>
+                <Car color="green"></Car>               
             </div>
             
         )
