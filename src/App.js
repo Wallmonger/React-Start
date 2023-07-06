@@ -1,13 +1,14 @@
 import logo from './logo.svg';
 import './App.css';
 
+// Component 1
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Sympa <code>le petit</code> JSX.
         </p>
         <a
           className="App-link"
@@ -15,7 +16,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          C'est parti !
         </a>
       </header>
     </div>
