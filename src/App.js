@@ -7,14 +7,15 @@ import Mycars from './components/Mycars';
 class App extends Component {
 
   state = {
-    title: 'Voiture gratuite'
+    title: 'Voiture gratuite',
+    color: 'green'
   }
 
   render() {
     return (
       <div className="App">
           { /* J'envoie mon props dans mon composant, il sera alors accessible en tant que props */}
-          <Mycars title={this.state.title}/>
+          <Mycars title={this.state.title} color={this.state.color}/>
       </div>
     );
   }
