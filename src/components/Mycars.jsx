@@ -1,7 +1,35 @@
 import React, { Component } from 'react';
-import Car from './Cars';
+// import Car from './Cars';
 import Wrapper from './Wrapper';
 import MyHeader from './MyHeader';
+
+const Car = ({children, color}) => {
+
+    let colorInfo = "";
+
+    if (color) {
+        colorInfo = color;
+    } else {
+        colorInfo = "Néant";
+    }
+
+    if (children) {
+        return (
+            <Wrapper>
+                <p>Marque: { children }</p>
+                <p>Couleur : {colorInfo}</p>  
+            </Wrapper> 
+        )
+    } else {
+        return (
+            <Wrapper>
+                <p>Non renseigné</p>   
+            </Wrapper>
+        )
+    }
+}
+
+
 class Mycars extends Component {
 
     state = {
@@ -19,7 +47,9 @@ class Mycars extends Component {
                 {/* Destructuring ver */}
                 {/* <h1>{title}</h1> */}
                 <Wrapper>
-                    <MyHeader textColor={color} title={this.props.title}></MyHeader>
+                    <MyHeader MyStyle={color}>
+                        {this.props.title}
+                    </MyHeader>
                 </Wrapper>
                 
                 {/* <Car color="red">{this.state.cars[0]}</Car>
