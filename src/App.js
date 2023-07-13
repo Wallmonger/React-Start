@@ -7,7 +7,7 @@ import Mycars from './components/Mycars';
 class App extends Component {
 
   state = {
-    title: 'Voiture gratuite',
+    title: 'Mon catalogue voiture 2',
     color: 'green'
   }
 
