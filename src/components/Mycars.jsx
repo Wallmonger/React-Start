@@ -36,25 +36,29 @@ class Mycars extends Component {
         cars : ["Ford", "Mercedes", "Peugeot"]
     }
 
+
+    noCopy = () => {
+        alert('merci de ne pas copier le texte');
+    }
+
+    addStyle = (e) => {
+        console.log(e);
+    }
+
     render() {
 
-        // Destructuring ver
-        // const {title} = this.props;
         const {color} = this.props;
 
         return (
             <div>
-                {/* Destructuring ver */}
-                {/* <h1>{title}</h1> */}
+                <h1 onMouseOver={this.addStyle}>{this.props.title}</h1>
                 <Wrapper>
                     <MyHeader MyStyle={color}>
                         {this.props.title}
                     </MyHeader>
                 </Wrapper>
-                
-                {/* <Car color="red">{this.state.cars[0]}</Car>
-                <Car>{this.state.cars[1]}</Car>
-                <Car color="green">{this.state.cars[2]}</Car>                */}
+                <p onCopy={this.noCopy}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est.</p>
+            
 
                 {this.state.cars.map((element, index) => (
                     <Car color="red">{element}</Car>
