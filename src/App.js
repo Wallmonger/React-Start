@@ -14,7 +14,13 @@ class App extends Component {
   changeTitle = (e) => {
       this.setState({
         title : 'Mon nouveau titre'
-      })
+      })    
+  }
+
+  changeViaParam = (newTitle) => {
+    this.setState({
+      title : newTitle
+    })
   }
 
   render() {
@@ -23,6 +29,7 @@ class App extends Component {
           { /* J'envoie mon props dans mon composant, il sera alors accessible en tant que props */}
           <Mycars title={this.state.title} color={this.state.color}/>
           <button onClick={this.changeTitle}>Changer le nom en dur</button>
+          <button onClick={() => this.changeViaParam('Parameter')}>Changer le nom paramètre</button>
       </div>
     );
   }
