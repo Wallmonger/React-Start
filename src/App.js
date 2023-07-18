@@ -18,10 +18,24 @@ class App extends Component {
   }
 
   changeViaParam = (newTitle) => {
+    // Using setState allow react to automatically detect any change and reload the render() method
     this.setState({
       title : newTitle
     })
   }
+
+  changeViaBind = (param) => {
+    this.setState({
+      title : param
+    })
+  }
+
+  changeViaInput = (e) => {
+    this.setState({
+      title : e.target.value
+    })
+  }
+
 
   render() {
     return (
@@ -29,7 +43,9 @@ class App extends Component {
           { /* J'envoie mon props dans mon composant, il sera alors accessible en tant que props */}
           <Mycars title={this.state.title} color={this.state.color}/>
           <button onClick={this.changeTitle}>Changer le nom en dur</button>
-          <button onClick={() => this.changeViaParam('Parameter')}>Changer le nom paramètre</button>
+          <button onClick={() => this.changeViaParam('Parameter')}>Parameter</button>
+          <button onClick={this.changeViaBind.bind(this, 'Titre via bind')}>Via bind</button>
+          <input type="text"onChange={this.changeViaInput} value={this.state.title}/>
       </div>
     );
   }
