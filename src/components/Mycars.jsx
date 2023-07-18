@@ -42,7 +42,12 @@ class Mycars extends Component {
     }
 
     addStyle = (e) => {
-        console.log(e);
+        if (e.target.classList.contains('styled')) {
+            e.target.classList.remove('styled');
+        } else {
+            e.target.classList.add('styled');
+        }
+        
     }
 
     render() {
