@@ -41,14 +41,7 @@ class Mycars extends Component {
         alert('merci de ne pas copier le texte');
     }
 
-    addStyle = (e) => {
-        if (e.target.classList.contains('styled')) {
-            e.target.classList.remove('styled');
-        } else {
-            e.target.classList.add('styled');
-        }
-        
-    }
+    
 
     render() {
 
@@ -56,7 +49,7 @@ class Mycars extends Component {
 
         return (
             <div>
-                <h1 onMouseOver={this.addStyle}>{this.props.title}</h1>
+                
                 <Wrapper>
                     <MyHeader MyStyle={color}>
                         {this.props.title}

@@ -11,12 +11,18 @@ class App extends Component {
     color: 'green'
   }
 
+  changeTitle = (e) => {
+      this.setState({
+        title : 'Mon nouveau titre'
+      })
+  }
+
   render() {
     return (
       <div className="App">
           { /* J'envoie mon props dans mon composant, il sera alors accessible en tant que props */}
           <Mycars title={this.state.title} color={this.state.color}/>
-          <button>Changer le nom en dur</button>
+          <button onClick={this.changeTitle}>Changer le nom en dur</button>
       </div>
     );
   }
