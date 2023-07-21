@@ -32,14 +32,14 @@ class Mycars extends Component {
                 <h1>{this.state.titre}</h1>
                 <button onClick={this.addTenYears}> + 10 ans</button>
 
-                {/* {
+                {
                     this.state.voitures.map((element, index) => (
-                        <Car color = {element.color} year = {year - element.year + ' ans'}>{element.name}</Car>
+                    <div key={element.name + '-' + index}>
+                        <Car name={element.name} color = {element.color} year = {year - element.year + ' ans'} />
+                    </div>
                     ))
-                } */}
-                <Car color = {this.state.voitures[0].color} year = {year - this.state.voitures[0].year + ' ans'}>{this.state.voitures[0].name}</Car>
-                <Car color = {this.state.voitures[1].color} year = {year - this.state.voitures[1].year + ' ans'}>{this.state.voitures[1].name}</Car>
-                <Car color = {this.state.voitures[2].color} year = {year - this.state.voitures[2].year + ' ans'}>{this.state.voitures[2].name}</Car>
+                }
+                
             </div>
            
         )
