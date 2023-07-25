@@ -24,20 +24,40 @@ class Mycars extends Component {
     }
 
     render() {
-
-        const year = new Date().getFullYear();
+        // Destructuring de notre state pour une écriture simplifiée
+        // L'array parcoure tous les éléments de "voitures" afin de les assigner aux variables ford, mercedes et peugeot
+        const [ford, mercedes, peugeot] = this.state.voitures; 
+        console.log(ford, mercedes, peugeot);
 
         return (
             <div>
                 <h1>{this.state.titre}</h1>
                 <button onClick={this.addTenYears}> + 10 ans</button>
+                <Car 
+                    name={this.state.voitures[0].name} 
+                    color={this.state.voitures[0].color} 
+                    year={this.state.voitures[0].year} 
+                />
+                <Car 
+                    name={this.state.voitures[1].name} 
+                    color={this.state.voitures[1].color} 
+                    year={this.state.voitures[1].year} 
+                />
+                <Car 
+                    name={this.state.voitures[2].name} 
+                    color={this.state.voitures[2].color} 
+                    year={this.state.voitures[2].year} 
+                />
+
 
                 {
+                    /*
                     this.state.voitures.map((element, index) => (
                     <div key={element.name + '-' + index}>
                         <Car name={element.name} color = {element.color} year = {year - element.year + ' ans'} />
                     </div>
                     ))
+                    */
                 }
                 
             </div>
