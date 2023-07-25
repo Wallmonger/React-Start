@@ -1,6 +1,6 @@
 import { Component } from 'react'
 import Car from './Cars'
-
+import Welcome from './Welcome'
 class Mycars extends Component {
 
     state = {
@@ -47,6 +47,7 @@ class Mycars extends Component {
 
         return (
             <div>
+                <Welcome></Welcome>
                 <h1>{this.state.titre}</h1>
                 <button onClick={this.addTenYears}> + 10 ans</button>
                 
