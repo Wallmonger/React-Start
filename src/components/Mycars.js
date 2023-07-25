@@ -33,31 +33,15 @@ class Mycars extends Component {
             <div>
                 <h1>{this.state.titre}</h1>
                 <button onClick={this.addTenYears}> + 10 ans</button>
-                <Car 
-                    name={ford.name} 
-                    color={ford.color} 
-                    year={ford.year} 
-                />
-                <Car 
-                    name={mercedes.name} 
-                    color={mercedes.color}
-                    year={mercedes.year}
-                />
-                <Car 
-                    name={peugeot.name}
-                    color={peugeot.color}
-                    year={peugeot.year}
-                />
+                
 
 
                 {
-                    /*
-                    this.state.voitures.map((element, index) => (
-                    <div key={element.name + '-' + index}>
-                        <Car name={element.name} color = {element.color} year = {year - element.year + ' ans'} />
+                    this.state.voitures.map(({name, color, year}, index) => (
+                    <div key={name + '-' + index}>
+                        <Car name={name} color = {color} year = {year} />
                     </div>
                     ))
-                    */
                 }
                 
             </div>
