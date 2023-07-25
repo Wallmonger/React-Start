@@ -5,9 +5,9 @@ class Mycars extends Component {
 
     state = {
         voitures: [
-            {name : 'ford', color: 'red', year : '2000'},
-            {name : 'Mercedes', color: 'black', year : '2010'},
-            {name : 'Peugeot', color: 'green', year : '2018'},
+            {name : 'ford', color: 'red', year : 2023},
+            {name : 'Mercedes', color: 'black', year : 2022},
+            {name : 'Peugeot', color: 'green', year : 2019},
         ],
         titre: 'Mon catalogue voitures 2' 
     }
@@ -21,6 +21,22 @@ class Mycars extends Component {
         this.setState({
             updatedState
         })
+    }
+
+    getAge = year => {
+        const now = new Date().getFullYear();
+        const age = now - year;
+
+        let frenchYearStr;
+        if (age === 1) {
+            frenchYearStr = "an";
+        } else if (age > 1) {
+            frenchYearStr = "ans";
+        } else {
+            frenchYearStr = "";
+        }
+        return `${age} ${frenchYearStr}`
+        
     }
 
     render() {
@@ -39,7 +55,12 @@ class Mycars extends Component {
                 {
                     this.state.voitures.map(({name, color, year}, index) => (
                     <div key={name + '-' + index}>
-                        <Car name={name} color = {color} year = {year} />
+                        <Car    
+                            color = {color} 
+                            year = {this.getAge(year)} 
+                        >
+                            {name}
+                        </Car>
                     </div>
                     ))
                 }

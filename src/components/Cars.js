@@ -1,11 +1,11 @@
-const Car = ({color, name, year}) => {
+const Car = ({color, children, year}) => {
 
     const colorInfo = color ? <p>Couleur: {color}</p> : <p>Couleur: "Néant"</p>;
 
-    if (name) {
+    if (children) {
         return (
             <div style={ {backgroundColor: 'pink', width: '400px', padding: '10px', margin: '5px auto'} }>
-                <p>Marque: { name }</p>
+                <p>Marque: { children }</p>
                 <p>Age: { year }</p>
                 {colorInfo}
             </div>
