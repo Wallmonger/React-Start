@@ -34,19 +34,19 @@ class Mycars extends Component {
                 <h1>{this.state.titre}</h1>
                 <button onClick={this.addTenYears}> + 10 ans</button>
                 <Car 
-                    name={this.state.voitures[0].name} 
-                    color={this.state.voitures[0].color} 
-                    year={this.state.voitures[0].year} 
+                    name={ford.name} 
+                    color={ford.color} 
+                    year={ford.year} 
                 />
                 <Car 
-                    name={this.state.voitures[1].name} 
-                    color={this.state.voitures[1].color} 
-                    year={this.state.voitures[1].year} 
+                    name={mercedes.name} 
+                    color={mercedes.color}
+                    year={mercedes.year}
                 />
                 <Car 
-                    name={this.state.voitures[2].name} 
-                    color={this.state.voitures[2].color} 
-                    year={this.state.voitures[2].year} 
+                    name={peugeot.name}
+                    color={peugeot.color}
+                    year={peugeot.year}
                 />
 
 
