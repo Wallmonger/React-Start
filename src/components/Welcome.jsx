@@ -1,13 +1,9 @@
-const bonjour = () => {
-    return console.log('bonjour');
-}
-
-const bonsoir = (param) => {
-    return console.log(param);
-}
-
-
 const Welcome = () => {
+
+
+    const bonjour = () => console.log('bonjour');
+    const bonsoir = param => console.log(param);
+    
 
 
     return (
