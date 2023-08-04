@@ -46,7 +46,7 @@ class Mycars extends Component {
         console.log(ford, mercedes, peugeot);
 
         return (
-            <Fragment>
+            <>
                 <Welcome></Welcome>
                 <h1>{this.state.titre}</h1>
                 <button onClick={this.addTenYears}> + 10 ans</button>
@@ -66,7 +66,7 @@ class Mycars extends Component {
                     ))
                 }
                 
-            </Fragment>
+            </>
            
         )
     }
