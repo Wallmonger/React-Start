@@ -1,4 +1,4 @@
-import { Component } from 'react'
+import { Component, Fragment } from 'react'
 import Car from './Cars'
 import Welcome from './Welcome'
 class Mycars extends Component {
@@ -46,7 +46,7 @@ class Mycars extends Component {
         console.log(ford, mercedes, peugeot);
 
         return (
-            <div>
+            <Fragment>
                 <Welcome></Welcome>
                 <h1>{this.state.titre}</h1>
                 <button onClick={this.addTenYears}> + 10 ans</button>
@@ -66,7 +66,7 @@ class Mycars extends Component {
                     ))
                 }
                 
-            </div>
+            </Fragment>
            
         )
     }
